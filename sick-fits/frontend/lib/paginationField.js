@@ -19,7 +19,7 @@ export default function PaginationField() {
 
       if (items.length && items.length !== first && page === pages) {
         return items;
-      } 
+      }
       if (items.length !== first) {
         return false;
       }
@@ -33,7 +33,6 @@ export default function PaginationField() {
 
     merge(existing, incoming, { args }) {
       // This runs when the Apollo client comes back from the network with the products.
-      console.log(`Merging items from the network ${incoming.length}`);
       const { skip } = args;
       const merged = existing ? existing.slice(0) : [];
 
